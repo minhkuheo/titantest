@@ -39,7 +39,7 @@ progress {
 template {
   display: none;
 }
-a {
+/* a {
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
 }
@@ -619,4 +619,4 @@ pre tt:after {
   html {
     font-size: 100%;
   }
-}
+} */

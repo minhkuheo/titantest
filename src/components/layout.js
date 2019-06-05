@@ -5,14 +5,20 @@
  * See: https://www.gatsbyjs.org/docs/static-query/
  */
 
-import React from "react"
-import PropTypes from "prop-types"
-import { StaticQuery, graphql } from "gatsby"
+import React from "react";
+import PropTypes from "prop-types";
+import { StaticQuery, graphql } from "gatsby";
 
-import Header from "./header"
-import "./layout.css"
+import TitanHeader from "./header";
+import TitanFooter from "./footer";
+import "./layout.css";
 
-const Layout = ({ children }) => (
+import { Layout } from "antd";
+import "antd/dist/antd.css"; // or 'antd/dist/antd.less';
+
+const { Content, Footer } = Layout;
+
+const MainLayout = ({ children }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -24,24 +30,19 @@ const Layout = ({ children }) => (
       }
     `}
     render={data => (
-      <>
-        <Header siteTitle={data.site.siteMetadata.title} />
-        <div
-          style={{
-            margin: `0 auto`,
-            maxWidth: 960,
-            padding: `0px 1.0875rem 1.45rem`,
-            paddingTop: 0,
-          }}
-        >
-          <main>{children}</main>
-          <footer>
-            © {new Date().getFullYear()}, Built with
-            {` `}
-            <a href="https://www.gatsbyjs.org">Gatsby</a>
-          </footer>
-        </div>
-      </>
+      <Layout>
+        <Layout.Header style={{ display: 'flex' }}>
+          <TitanHeader siteTitle={data.site.siteMetadata.title} headerTheme='dark'/>
+        </Layout.Header>
+        <Content style={{ padding: "0 50px" }}>
+          <div style={{ background: "#fff", padding: 24, minHeight: 280 }}>
+            {children}
+          </div>
+        </Content>
+        <Footer style={{ textAlign: "center" }}>
+          <TitanFooter />
+        </Footer>
+      </Layout>
     )}
   />
 )
@@ -50,4 +51,4 @@ Layout.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
-export default Layout
+export default MainLayout
