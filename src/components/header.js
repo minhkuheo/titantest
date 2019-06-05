@@ -45,7 +45,8 @@ const Header = ({ siteTitle, headerTheme }) => (
         <Link to={ROUTES.ABOUT}>About us</Link>
       </Menu.Item>
       <Menu.Item key="login">
-        <Link to={ROUTES.SIGN_IN}>Login</Link>
+        <a href="https://app.titanplan.com/account/login">Login</a>
+        {/* <Link to={ROUTES.SIGN_IN}>Login</Link> */}
       </Menu.Item>
     </Menu>
   </React.Fragment>
