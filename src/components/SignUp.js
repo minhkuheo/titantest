@@ -10,8 +10,8 @@ const StartSchedulingButton = styled(Button)`
     ${props => props.alwaysbottom && `
         position: fixed; 
         z-index: 2;
-        bottom: 30px; 
-        right: 20px;
+        bottom: 50px; 
+        right: 40px;
     `};
 `;
 
