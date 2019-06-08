@@ -2,15 +2,18 @@ import React from 'react';
 import {
     Row, Col,
     Button, Icon, Input, Form,
-    Typography
+    Typography,
+    // Tooltip
 } from 'antd';
 import {
     BasicLandingPageRow,
     RowAlignCenter,
     RowGreen,
-    RowSmokeBlue
+    RowSmokeBlue,
+    Iframe,
 } from "../components/styled_components";
 import { PriceComponent } from "./pricing";
+import { LetsSignUpButton } from '../components/SignUp';
 import googlePlayImg from '../images/google-play-badge.svg';
 import appStoreImg from '../images/download-on-the-app-store-apple.svg';
 
@@ -22,19 +25,18 @@ import appStoreImg from '../images/download-on-the-app-store-apple.svg';
  * ******************************************************************/
 export default () => (
     <React.Fragment>
+        <MainMessage />
+
         <RowAlignCenter>
-            <Typography.Title>Employee Planning - Made Better!</Typography.Title>
-            <h3>Say hello to TITANPLAN - a trully versatile shiftplanning solution</h3>
-            <Typography.Title>FREE FOR UNLIMITED USERS</Typography.Title>
-
-            <PlanningInputForm />
+            <LetsSignUpButton bottomFixed={false}/>
         </RowAlignCenter>
+        {/* <PlanningInputForm /> */}
 
-        <Row gutter={40}>
-            <Col span={12} push={3}>
-                <iframe title="titanplandanish" width="460" height="255" src="https://www.youtube.com/embed/CHXfyO5Q5YY" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+        <Row gutter={16}>
+            <Col span={12}>
+                <Iframe title="titanplandanish" width="560" height="315" src="https://www.youtube.com/embed/CHXfyO5Q5YY" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></Iframe>
             </Col>
-            <Col span={12} push={1}>
+            <Col span={12}>
                 <Typography.Title level={3}>Why use TITANPLAN?</Typography.Title>
                 <p>Spend 90 seconds getting to know us</p>
 
@@ -135,124 +137,15 @@ export default () => (
  *                                                                  *
  * ******************************************************************/
 
-// function hasErrors(fieldsError) {
-//     return Object.keys(fieldsError).some(field => fieldsError[field]);
-// }
-
-class PlanningInputFormBase extends React.Component {
-    componentDidMount() {
-        // To disabled submit button at the beginning.
-        // this.props.form.validateFields();
-    }
-
-    handleSubmit = e => {
-        e.preventDefault();
-        this.props.form.validateFields((err, values) => {
-            if (!err) {
-                console.log('Received values of form: ', values);
-            } else {
-                alert('error !!!');
-            }
-        });
-    };
-
-    render() {
-        const { 
-            getFieldDecorator, 
-            // getFieldsError, 
-            getFieldError, 
-            isFieldTouched 
-        } = this.props.form;
-
-        // Only show error after a field is touched.
-        const usernameError = isFieldTouched('username') && getFieldError('username');
-        // const passwordError = isFieldTouched('password') && getFieldError('password');
-        const emailError = isFieldTouched('email') && getFieldError('email');
-        const companyError = isFieldTouched('company') && getFieldError('company');
-        return (
-            // <Form layout="inline" onSubmit={this.handleSubmit} style={{ backgroundColor: '#08B0A0' }}>
-            //     <Form.Item>
-            //         <Input
-            //             prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />}
-            //             placeholder="Full name"
-            //         />
-            //     </Form.Item>
-            //     <Form.Item>
-            //         <Input
-            //             prefix={<Icon type="mail" style={{ color: 'rgba(0,0,0,.25)' }} />}
-            //             type="email"
-            //             placeholder="Email"
-            //         />
-            //     </Form.Item>
-            //     <Form.Item>
-            //         <Input
-            //             prefix={<Icon type="email" style={{ color: 'rgba(0,0,0,.25)' }} />}
-            //             type="text"
-            //             placeholder="Company"
-            //         />
-            //     </Form.Item>
-            //     <Form.Item>
-            //         <Button type="primary" htmlType="submit">Start Planning</Button>
-            //     </Form.Item>
-            // </Form>
-            <Form layout="inline" onSubmit={this.handleSubmit} style={{ backgroundColor: '#08B0A0' }}>
-                <Form.Item validateStatus={usernameError ? 'error' : ''} help={usernameError || ''}>
-                    {getFieldDecorator('username', {
-                        rules: [{ required: true, message: 'Please input your full name!' }],
-                    })(
-                        <Input
-                            prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />}
-                            placeholder="Full name"
-                        />,
-                    )}
-                </Form.Item>
-                <Form.Item validateStatus={emailError ? 'error' : ''} help={emailError || ''}>
-                    {
-                        getFieldDecorator('email', {
-                            rules: [
-                                {
-                                    type: 'email',
-                                    message: 'The input is not valid email'
-                                },
-                                {
-                                    required: true,
-                                    message: 'Please input your email!'
-                                }
-                            ]
-                        })(
-                            <Input
-                                prefix={<Icon type="mail" style={{ color: 'rgba(0,0,0,.25)' }} />}
-                                type="email"
-                                placeholder="Email"
-                            />,
-                        )
-                    }
-                </Form.Item>
-                <Form.Item validateStatus={companyError ? 'error' : ''} help={companyError || ''}>
-                    {
-                        getFieldDecorator('company', {
-                            rules: [{ required: true, message: 'Company required!' }],
-                        })(
-                            <Input
-                                prefix={<Icon type="bank" style={{ color: 'rgba(0,0,0,.25)' }} />}
-                                type='text'
-                                placeholder="Company"
-                            />,
-                        )
-                    }
-                </Form.Item>
-                <Form.Item>
-                    {/* <Button ghost htmlType="submit" shape='round' disabled={hasErrors(getFieldsError())}> */}
-                    <Button ghost htmlType="submit" shape='round'>
-                        Start Planning
-                    </Button>
-                </Form.Item>
-            </Form>
-        );
-    }
-}
-
-const PlanningInputForm = Form.create()(PlanningInputFormBase);
+const MainMessage = () => (
+    <React.Fragment>
+        <RowAlignCenter>
+            <Typography.Title>TitanPlan - Shift Planning!</Typography.Title>
+            <h3>made simple for everyone. Start scheduling in minutes for</h3>
+            <Typography.Title level={2}>FREE FOR UNLIMITED USERS</Typography.Title>
+        </RowAlignCenter>
+    </React.Fragment>
+);
 
 const OptimiseItem = ({ optimiseIcon, optimiseTitle, optimiseDescription }) => (
     <Col span={8}>

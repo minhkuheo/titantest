@@ -15,12 +15,13 @@ const Header = ({ siteTitle, headerTheme }) => (
       <Menu.Item>
         <h1><Link to="/">{siteTitle}</Link></h1>
       </Menu.Item>
-      {/* <Menu.Item key="planning">
-        <Link to={ROUTES.PLANNING}>Planning</Link>
-      </Menu.Item> */}
-      <Menu.SubMenu title="Features">
+      
+      <Menu.Item key="planning">
+        <Link to={ROUTES.FEATURES}>Features</Link>
+      </Menu.Item>
+      
+      {/* <Menu.SubMenu title="Features">
         <Menu.ItemGroup>
-          {/* <Menu.Item key="overview">Overview</Menu.Item> */}
           <Menu.Item key="shift_planning">
             <Link to={ROUTES.SHIFT_PLANNING}>Shift Planning</Link>
           </Menu.Item>
@@ -31,22 +32,22 @@ const Header = ({ siteTitle, headerTheme }) => (
             <Link to={ROUTES.PAYROLL}>Payroll</Link>
           </Menu.Item>
         </Menu.ItemGroup>
-      </Menu.SubMenu>
+      </Menu.SubMenu> */}
+
       <Menu.Item key="pricing">
         <Link to={ROUTES.PRICING}>Pricing</Link>
       </Menu.Item>
-      {/* <Menu.Item key="company">
-        <Link to={ROUTES.COMPANY}>Company</Link>
-      </Menu.Item> */}
+
       <Menu.Item key="cases">
         <Link to={ROUTES.CASES}>Cases</Link>
       </Menu.Item>
+
       <Menu.Item key="about">
         <Link to={ROUTES.ABOUT}>About us</Link>
       </Menu.Item>
+
       <Menu.Item key="login">
         <a href="https://app.titanplan.com/account/login">Login</a>
-        {/* <Link to={ROUTES.SIGN_IN}>Login</Link> */}
       </Menu.Item>
     </Menu>
   </React.Fragment>

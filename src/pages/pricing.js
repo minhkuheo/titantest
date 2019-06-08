@@ -16,8 +16,9 @@ export default () => (
 
 export const PriceComponent = () => (
     <RowAlignCenter>
-        <Typography.Title level={2}>PRICING</Typography.Title>
-        <h4>Simple and Transparent Price Model</h4>
+        <Typography.Title level={2}>PRICING - Best value in the industry</Typography.Title>
+        {/* <Typography.Title level={3}></Typography.Title> */}
+        <Typography.Title level={4}>Saves you up to 85% compared to other planning softwares</Typography.Title>
 
         <Row gutter={16}>
             <Col span={8}>
