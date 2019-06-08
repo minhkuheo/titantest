@@ -1,13 +1,14 @@
 import React from 'react';
 import {
     Row, Col,
-    Button, Icon, Input, Form,
+    Button, Icon,
     Typography,
     // Tooltip
 } from 'antd';
 import {
     BasicLandingPageRow,
     RowAlignCenter,
+    RowAlignRight,
     RowGreen,
     RowSmokeBlue,
     Iframe,
@@ -96,10 +97,10 @@ export default () => (
                 <p>Once you fully integrate TITANPLAN, you will be</p>
                 <p>surprised how much more time you have to develop your business</p>
             </RowAlignCenter>
-            <Row>
+            <RowAlignRight>
                 <h3><Icon type="plus-circle" theme="twoTone" twoToneColor="#52c41a" /> Let colleagues swap shifts</h3>
                 <h3><Icon type="plus-circle" theme="twoTone" twoToneColor="#52c41a" /> More data - less questions</h3>
-            </Row>
+            </RowAlignRight>
         </Row>
 
         <RowGreen>

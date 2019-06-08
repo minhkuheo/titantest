@@ -13,6 +13,9 @@ export const BasicLandingPageRow = styled(Row)`
 export const RowAlignCenter = styled(BasicLandingPageRow)`
     text-align: center;
 `;
+export const RowAlignRight = styled(BasicLandingPageRow)`
+    text-align: right;
+`;
 
 export const RowGreen = styled(RowAlignCenter)`
     color: white;
