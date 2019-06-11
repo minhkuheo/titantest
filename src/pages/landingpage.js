@@ -14,7 +14,7 @@ import {
     Iframe,
 } from "../components/styled_components";
 import { PriceComponent } from "./pricing";
-import { LetsSignUpButton } from '../components/SignUp';
+import LetsSignUpButton from '../components/SignUp';
 import googlePlayImg from '../images/google-play-badge.svg';
 import appStoreImg from '../images/download-on-the-app-store-apple.svg';
 
