@@ -14,7 +14,7 @@ import {
     Iframe,
 } from "../components/styled_components";
 import { PriceComponent } from "./pricing";
-import LetsSignUpButton from '../components/SignUp';
+import LetsSignUpButton from '../components/signup';
 import googlePlayImg from '../images/google-play-badge.svg';
 import appStoreImg from '../images/download-on-the-app-store-apple.svg';
 
@@ -87,9 +87,13 @@ export default () => (
             </Row>
         </RowAlignCenter>
 
-        <div style={{ backgroundColor: '#B2FCFE' }}>
-            <PriceComponent />
-        </div>
+        <RowGreen>
+            <Typography.Title level={2} style={{ color: 'white' }}>HUJAMBO! Chào bạn</Typography.Title>
+            <p>Being low cost and highly customisable, including crowd-sourced translation</p>
+            <p>TITANPLAN is the go-to workforce planner for Asia and Africa.</p>
+            <br />
+            <p>(and YES, we are available in Vietnamese and Swahili)</p>
+        </RowGreen>
 
         <Row>
             <RowAlignCenter>
@@ -103,17 +107,13 @@ export default () => (
             </RowAlignRight>
         </Row>
 
-        <RowGreen>
-            <Typography.Title level={2} style={{ color: 'white' }}>HUJAMBO! Chào bạn</Typography.Title>
-            <p>Being low cost and highly customisable, including crowd-sourced translation</p>
-            <p>TITANPLAN is the go-to workforce planner for Asia and Africa.</p>
-            <br />
-            <p>(and YES, we are available in Vietnamese and Swahili)</p>
-        </RowGreen>
+        <div style={{ backgroundColor: '#B2FCFE' }}>
+            <PriceComponent />
+        </div>
 
         <RowSmokeBlue>
             <Typography.Title level={2}>GET ORGANISED</Typography.Title>
-            <Typography.Title level={2}>DOWNLOAD OUR APP TODAY</Typography.Title>
+            <Typography.Title level={2}>DOWNLOAD OUR FREE APP TODAY</Typography.Title>
 
             <BasicLandingPageRow>
                 <Button htmlType="button">
@@ -124,7 +124,7 @@ export default () => (
                 </Button>
             </BasicLandingPageRow>
 
-            <p>Get the TITANPLAN app for iOS or Android here!</p>
+            <p>Get the TITANPLAN app for iOS or Android for FREE here!</p>
             <p>All you need for scheduling, communication, shift planning and time registration</p>
         </RowSmokeBlue>
 

@@ -8,6 +8,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { StaticQuery, graphql } from "gatsby";
+import TitanLogo from '../images/TITANPLAN_logomark_primary.svg';
 
 import TitanHeader from "./header";
 import TitanFooter from "./footer";
@@ -32,7 +33,8 @@ const MainLayout = ({ children }) => (
     render={data => (
       <Layout>
         <Layout.Header style={{ display: 'flex' }}>
-          <TitanHeader siteTitle={data.site.siteMetadata.title} headerTheme='dark'/>
+          <TitanHeader logo={TitanLogo} headerTheme='dark'/>
+          {/* <TitanHeader siteTitle={data.site.siteMetadata.title} logo={TitanLogo} headerTheme='dark'/> */}
         </Layout.Header>
         <Content style={{ padding: "0 50px" }}>
           <div style={{ background: "#fff", padding: 24, minHeight: 280 }}>

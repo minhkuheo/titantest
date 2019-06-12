@@ -5,34 +5,24 @@ import PropTypes from "prop-types"
 import { Menu } from "antd"
 import * as ROUTES from "../constants/routes"
 
-const Header = ({ siteTitle, headerTheme }) => (
+const Header = ({ logo, headerTheme }) => (
   <React.Fragment>
     <Menu
       mode="horizontal"
       theme={headerTheme}
       style={{ lineHeight: "64px" }}
+      inlineCollapsed={false}
     >
       <Menu.Item>
-        <h1><Link to="/">{siteTitle}</Link></h1>
+        {/* <h1><Link to="/">{siteTitle}</Link></h1> */}
+        <Link to="/">
+          <img alt="_logo" src={logo} height="42" width="42"/> <span>TitanPlan</span>
+        </Link>
       </Menu.Item>
       
       <Menu.Item key="planning">
         <Link to={ROUTES.FEATURES}>Features</Link>
       </Menu.Item>
-      
-      {/* <Menu.SubMenu title="Features">
-        <Menu.ItemGroup>
-          <Menu.Item key="shift_planning">
-            <Link to={ROUTES.SHIFT_PLANNING}>Shift Planning</Link>
-          </Menu.Item>
-          <Menu.Item key="time_registration">
-            <Link to={ROUTES.TIME_REGISTRATiON}>Time Registration</Link>            
-          </Menu.Item>
-          <Menu.Item key="payroll">
-            <Link to={ROUTES.PAYROLL}>Payroll</Link>
-          </Menu.Item>
-        </Menu.ItemGroup>
-      </Menu.SubMenu> */}
 
       <Menu.Item key="pricing">
         <Link to={ROUTES.PRICING}>Pricing</Link>
@@ -61,4 +51,4 @@ Header.defaultProps = {
   siteTitle: ``,
 }
 
-export default Header
+export default Header;

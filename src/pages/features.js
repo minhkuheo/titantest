@@ -8,7 +8,7 @@ import {
     Iframe,
 } from '../components/styled_components';
 
-import LetsSignUpButton from '../components/SignUp';
+import LetsSignUpButton from '../components/signup';
 
 export default () => (
     <Layout>

@@ -2,7 +2,7 @@ import React from 'react';
 import styled from "styled-components";
 import { 
     Row, 
-    // Button
+    Button,
 } from 'antd';
 
 export const BasicLandingPageRow = styled(Row)`
@@ -46,3 +46,20 @@ export const Iframe = (props) => (
         <IframeBase {...props} />
     </IframeWrapBase>
 );
+
+export const DefaultButton = styled(Button)`
+    background-color: #08B0A0;
+    color: white;
+`;
+
+/**
+ * The "Let's Start Scheduling" button on the Landing page and Features page 
+ */
+export const StartSchedulingButton = styled(DefaultButton)`
+    ${props => props.alwaysbottom && `
+        position: fixed; 
+        z-index: 2;
+        bottom: 50px; 
+        right: 40px;
+    `};
+`;

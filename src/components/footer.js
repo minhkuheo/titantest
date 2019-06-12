@@ -46,7 +46,7 @@ export default () => (
         </Row>
 
         <Row>
-            <p>Current version: 1.1.1</p>    
+            <p>© Copyright 2019 TitanPlan. All Rights Reserved - Current version: 1.1.1</p>    
         </Row>  
     </React.Fragment>
 );

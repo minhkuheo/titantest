@@ -1,22 +1,7 @@
 import React from 'react';
-import styled from 'styled-components';
 import {
-    Button, 
-    // Modal, 
-    // Icon,
-    // Form, Input
-} from 'antd';
-
-const StartSchedulingButton = styled(Button)`
-    background-color: #08B0A0;
-    color: white;
-    ${props => props.alwaysbottom && `
-        position: fixed; 
-        z-index: 2;
-        bottom: 50px; 
-        right: 40px;
-    `};
-`;
+    StartSchedulingButton
+} from './styled_components';
 
 export default (props) => (
     <SignUpButton {...props}/>

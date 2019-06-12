@@ -84,7 +84,13 @@ const PriceCard = ({packageTitle, packagePrice, packagePriceDescription, firstLi
             <br />
             <br />
             <br />
-            <Button block size="large" style={packageTitle === 'STANDARD' ? { backgroundColor: '#08B0A0' } : null}>{buttonName}</Button>
+            <Button 
+                block 
+                size="large" 
+                style={packageTitle === 'STANDARD' ? { backgroundColor:'#08B0A0', color:"white" } : null}
+            >
+                <strong>{buttonName}</strong>
+            </Button>
             <br />
             <br />
             <Button block type="link">Read more</Button>
