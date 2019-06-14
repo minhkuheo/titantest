@@ -34,19 +34,15 @@ export default () => (
                         Hà Nội
                     </p>
 
-                    <Icon type="mail" />
-                    <p>
-                        alexander.haugstrup@titanplan.com
-                    </p>
                     
-                    <Icon type="phone" />
-                    <p>+45 20 22 44 66</p>
+                    <p><Icon type="mail" />: alexander.haugstrup@titanplan.com</p>
+                    <p><Icon type="phone" />: +45 20 22 44 66</p>
                 </Row>
             </Col>
         </Row>
 
         <Row>
-            <p>© Copyright 2019 TitanPlan. All Rights Reserved - Current version: 1.1.1</p>    
-        </Row>  
+            <p>Copyright © 2019 TitanPlan. All Rights Reserved - Current version: 1.1.1</p>    
+        </Row>
     </React.Fragment>
 );

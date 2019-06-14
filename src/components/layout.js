@@ -39,7 +39,7 @@ const MainLayout = ({ children }) => (
             {children}
           </div>
         </Content>
-        <Footer style={{ textAlign: "center" }}>
+        <Footer>
           <TitanFooter />
         </Footer>
       </Layout>
