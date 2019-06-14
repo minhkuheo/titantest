@@ -1,9 +1,20 @@
 import React from 'react';
 import styled from "styled-components";
 import { 
-    Row, 
+    Row, Col,
     Button,
 } from 'antd';
+import PlusSignBig from '../../images/plusSignBig.svg';
+export const BigH1 = styled.h1`
+    color: #fff;
+    font-weight: 300;
+    line-height: 1.3;
+    margin: 0;
+    font-size: 72px;
+    ${props => props.color && `
+        color: ${props.color}
+    `};
+`;
 
 export const BasicLandingPageRow = styled(Row)`
     margin: 20px 0px 70px 0px;
@@ -28,7 +39,7 @@ export const RowSmokeBlue = styled(RowAlignCenter)`
 
 const IframeWrapBase = styled.div`
     position: relative;
-    overflow: hidden;
+    // overflow: hidden;
     padding-top: 56.25%;
 `;
 
@@ -36,9 +47,10 @@ const IframeBase = styled.iframe`
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 90%;
+    height: 90%;
     border: 0;
+    margin-left: 40px;
 `;
 
 export const Iframe = (props) => (
@@ -63,3 +75,18 @@ export const StartSchedulingButton = styled(DefaultButton)`
         right: 40px;
     `};
 `;
+
+/**
+ * 
+ */
+export const FeatureBoxOutline = ({title, paragraph}) => (
+    <Row>
+        <Col span={2}>
+            <img src={PlusSignBig} alt="plusbig13" style={{ width:'34px' }}/>
+        </Col>
+        <Col span={20}>
+            <h3>{title}</h3>
+            <p>{paragraph}</p>
+        </Col>
+    </Row>
+);

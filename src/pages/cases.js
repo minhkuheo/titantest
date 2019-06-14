@@ -40,7 +40,7 @@ const MainMessage = () => (
         {/* <p>To whom we serve ? Who might need us ? (Work places) Who do we suggest should need us / will need us ?</p>
         <p>Do we have any exceptional case that TitanPlan might fit into ?</p> */}
         <Typography.Title level={3}>TitanPlan - fast and easy shift planning</Typography.Title>
-        <p>Our service is to help you and your colleagues in make shift planning, do better communication and manage collaboration</p>  
+        <p>We use Machine Learning and Big Data analytics to adapt the system to fit your needs</p>  
     </React.Fragment>
 );
 

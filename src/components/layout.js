@@ -8,15 +8,13 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { StaticQuery, graphql } from "gatsby";
-import TitanLogo from '../images/TITANPLAN_logomark_primary.svg';
+import TitanLogo from '../images/Group 542.svg';
 
 import TitanHeader from "./header";
 import TitanFooter from "./footer";
-import "./layout.css";
-
 import { Layout } from "antd";
 import "antd/dist/antd.css"; // or 'antd/dist/antd.less';
-
+import "./styles.css";
 const { Content, Footer } = Layout;
 
 const MainLayout = ({ children }) => (
@@ -32,12 +30,12 @@ const MainLayout = ({ children }) => (
     `}
     render={data => (
       <Layout>
-        <Layout.Header style={{ display: 'flex' }}>
-          <TitanHeader logo={TitanLogo} headerTheme='dark'/>
+        <Layout.Header>
+          <TitanHeader logo={TitanLogo}/>
           {/* <TitanHeader siteTitle={data.site.siteMetadata.title} logo={TitanLogo} headerTheme='dark'/> */}
         </Layout.Header>
-        <Content style={{ padding: "0 50px" }}>
-          <div style={{ background: "#fff", padding: 24, minHeight: 280 }}>
+        <Content>
+          <div className="content">
             {children}
           </div>
         </Content>
@@ -53,4 +51,4 @@ Layout.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
-export default MainLayout
+export default MainLayout;
