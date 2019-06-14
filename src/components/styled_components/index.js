@@ -4,7 +4,7 @@ import {
     Row, Col,
     Button,
 } from 'antd';
-import PlusSignBig from '../../images/plusSignBig.svg';
+import PlusSignBig from '../../images/PlusSignBig.svg';
 export const BigH1 = styled.h1`
     color: #fff;
     font-weight: 300;
