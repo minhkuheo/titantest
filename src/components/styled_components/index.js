@@ -53,15 +53,29 @@ const IframeBase = styled.iframe`
     margin-left: 40px;
 `;
 
+// Responsive iframe
 export const Iframe = (props) => (
     <IframeWrapBase>
         <IframeBase {...props} />
     </IframeWrapBase>
 );
 
+/**
+ * The button which only has green background and white color
+ */
 export const DefaultButton = styled(Button)`
     background-color: #08B0A0;
     color: white;
+`;
+
+/**
+ * Styled Buttons: "Appstore button" and "Google Play button"
+ * The 2 buttons that will redirect the user to the corresponding store.
+ */
+export const GetAppButton = styled(Button)`
+    padding: 0;
+    border: none;
+    background: none;
 `;
 
 /**

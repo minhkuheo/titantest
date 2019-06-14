@@ -1,7 +1,6 @@
 import React from 'react';
 import {
     Row, Col,
-    Button,
     Typography,
     // Tooltip
 } from 'antd';
@@ -12,7 +11,8 @@ import {
     RowGreen,
     RowSmokeBlue,
     Iframe,
-    BigH1
+    BigH1,
+    GetAppButton,
 } from "../components/styled_components";
 import { PriceComponent } from "./pricing";
 import LetsSignUpButton from '../components/signup';
@@ -143,12 +143,12 @@ export default () => (
             <Typography.Title level={2}>DOWNLOAD OUR FREE APP TODAY</Typography.Title>
 
             <BasicLandingPageRow>
-                <Button htmlType="button">
+                <GetAppButton htmlType="button" >
                     <img src={appStoreImg} alt="AppStore" />
-                </Button>
-                <Button htmlType="button">
+                </GetAppButton>
+                <GetAppButton htmlType="button">
                     <img src={googlePlayImg} alt="GooglePlay" />
-                </Button>
+                </GetAppButton>
             </BasicLandingPageRow>
 
             <p>Get the TITANPLAN app for iOS or Android for FREE here!</p>
