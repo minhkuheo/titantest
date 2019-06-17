@@ -91,9 +91,9 @@ const PriceCard = ({packageTitle, packagePrice, packagePriceDescription, firstLi
             >
                 <strong>{buttonName}</strong>
             </Button>
+            {/* <br />
             <br />
-            <br />
-            <Button block type="link">Read more</Button>
+            <Button block type="link">Read more</Button> */}
         </Card>
     );
 };

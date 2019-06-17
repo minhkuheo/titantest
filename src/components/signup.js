@@ -16,6 +16,7 @@ const SignUpButton = (props) => {
                 // alwaysbottom={alwaysbottom ? true : undefined}
                 alwaysbottom={props.alwaysbottom ? 1 : 0}
                 href="https://app.titanplan.com/account/register"
+                style={{ padding:'16px 16px', minWidth: '300px', height: "auto" }}
             >
                 <strong>Let's Start Scheduling</strong>
             </StartSchedulingButton>

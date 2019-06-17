@@ -1,7 +1,7 @@
 import React from 'react';
 import Layout from '../components/layout';
 // import styled from 'styled-components';
-import { RowAlignCenter } from '../components/styled_components';
+import { RowAlignCenter, Heading1, Heading2 } from '../components/styled_components';
 import {
     // Typography, List, Card
     Row, 
@@ -36,8 +36,8 @@ const AboutUs = () => (
 
 const Message = () => (
     <React.Fragment>
-        <h1>TitanPlan is a versatile shift planning system</h1>
-        <h4>created and designed to make your shift planning fast and easier</h4>
+        <Heading1>TitanPlan is a versatile shift planning system</Heading1>
+        <Heading2>created and designed to make your shift planning fast and easier</Heading2>
     </React.Fragment>
 );
 

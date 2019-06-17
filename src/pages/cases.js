@@ -1,11 +1,10 @@
 import React from 'react';
 import Layout from '../components/layout';
 import {
-    Typography, 
     List,
     Card,
 } from 'antd';
-import { RowAlignCenter, DefaultButton } from '../components/styled_components';
+import { RowAlignCenter, DefaultButton, Heading1, Heading2 } from '../components/styled_components';
 
 // import styled from 'styled-components';
 
@@ -39,8 +38,8 @@ const MainMessage = () => (
     <React.Fragment>
         {/* <p>To whom we serve ? Who might need us ? (Work places) Who do we suggest should need us / will need us ?</p>
         <p>Do we have any exceptional case that TitanPlan might fit into ?</p> */}
-        <Typography.Title level={3}>TitanPlan - fast and easy shift planning</Typography.Title>
-        <p>We use Machine Learning and Big Data analytics to adapt the system to fit your needs</p>  
+        <Heading1>TitanPlan - fast and easy shift planning</Heading1>
+        <Heading2>We use Machine Learning and Big Data analytics to adapt the system to fit your needs</Heading2>  
     </React.Fragment>
 );
 

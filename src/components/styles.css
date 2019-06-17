@@ -1,5 +1,13 @@
-body{
+html {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+body {
     overflow-x: hidden;
+    font-family: 'Roboto';
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 .content {
     margin-top: 50px;
@@ -120,8 +128,13 @@ body{
 }
 
 .featureBoxLaptop {
-    height: 698px;
+    height: 892px;
     background: url('../images/laptopPhotoTurnLeft.svg') transparent no-repeat right center;
     background-size: 1328px 698px;
     background-position-x: 150px;
+    background-color: #08B0A0;
+}
+.featureBoxLaptop .featureBoxLaptopCol {
+    margin-top: 125px;
+    color: #fff;
 }

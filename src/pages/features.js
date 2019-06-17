@@ -3,13 +3,13 @@ import Layout from '../components/layout';
 import {
     Col,
     Row,
-    Card,
 } from 'antd';
 import { 
     RowAlignCenter, 
-    // Iframe,
+    OptimiseItem,
     FeatureBoxOutline,
-    BigH1,
+    Title,
+    Heading1,
 } from '../components/styled_components';
 
 import LetsSignUpButton from '../components/signup';
@@ -21,7 +21,7 @@ import TimeRegistrationIcon from '../images/ICON_Time Registration.svg';
 export default () => (
     <Layout>
         <section className="titan-header">
-            <BigH1>We're right on schedule</BigH1>
+            <Title>We're right on schedule</Title>
             <h4 className="ant-typography">Learn how TitanPlan is quickly becoming the go-to-solution</h4>
         </section>
 
@@ -29,14 +29,23 @@ export default () => (
             <section className="featureBoxMobile">
                 <Col span={10} offset={14} className="featureBoxMobileCol">
                     <FeatureBoxOutline 
+                        iconName="plus-circle"
+                        iconColor="#08B0A0"
+                        iconSize="32px"
                         title="FREE for unlimited users"
                         paragraph="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqui"
                     />
                     <FeatureBoxOutline 
+                        iconName="plus-circle"
+                        iconColor="#08B0A0"
+                        iconSize="32px"
                         title="Human Resources"
                         paragraph="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqui"
                     />
                     <FeatureBoxOutline 
+                        iconName="plus-circle"
+                        iconColor="#08B0A0"
+                        iconSize="32px"
                         title="Employee Management"
                         paragraph="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqui"
                     />
@@ -46,13 +55,21 @@ export default () => (
 
         <Row>
             <section className="featureBoxLaptop">
-                <Col span={10} offset={2}>
+                <Col span={10} offset={2} className="featureBoxLaptopCol">
                     <FeatureBoxOutline 
+                        iconName="plus-circle"
+                        iconColor="#fff"
+                        iconSize="32px"
                         title="Fairness"
+                        titleColor="#fff"
                         paragraph="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqui"
                     />
                     <FeatureBoxOutline 
+                        iconName="plus-circle"
+                        iconColor="#fff"
+                        iconSize="32px"
                         title="Collaboration"
+                        titleColor="#fff"
                         paragraph="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqui"
                     />
                 </Col>
@@ -60,34 +77,26 @@ export default () => (
         </Row>
 
         <RowAlignCenter>
-            <h1>KEY FEATURES</h1>
-            <h4>Spend LESS time Organising</h4>
-            <h4>- and MORE time Developing your Business</h4>
+            <Heading1 color="#48AFCB">KEY FEATURES</Heading1>
+            <h3>Spend LESS time Organising</h3>
+            <h3>- and MORE time Developing your Business</h3>
+            <br />
             <Row gutter={48}>
-                <Col span={8}>
-                    <Card
-                        border={false}
-                        cover={<img alt="templates" src={ShiftPlanningIcon} style={{ width:'auto', height:'64px'}}/>}
-                    >
-                        <Card.Meta title="Templates" description="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqui"/>
-                    </Card>
-                </Col>
-                <Col span={8}>
-                    <Card
-                        border={false}
-                        cover={<img alt="timesheet" src={TimeRegistrationIcon} style={{ width:'auto', height:'64px'}}/>}
-                    >
-                        <Card.Meta title="Timesheets" description="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqui"/>
-                    </Card>
-                </Col>
-                <Col span={8}>
-                    <Card
-                        border={false}
-                        cover={<img alt="vacation" src={CalenderIcon} style={{ width:'auto', height:'64px'}}/>}
-                    >
-                        <Card.Meta title="Vacation" description="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqui"/>
-                    </Card>
-                </Col>
+                <OptimiseItem
+                    optimiseIcon={<img alt="templates" src={ShiftPlanningIcon} />}
+                    optimiseTitle='Templates'
+                    optimiseDescription='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. '
+                />
+                <OptimiseItem
+                    optimiseIcon={<img alt="timesheet" src={TimeRegistrationIcon} />}
+                    optimiseTitle='Timesheets'
+                    optimiseDescription='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. '
+                />
+                <OptimiseItem
+                    optimiseIcon={<img alt="vacation" src={CalenderIcon} />}
+                    optimiseTitle='Vacation'
+                    optimiseDescription='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. '
+                />
             </Row>
         </RowAlignCenter>
 

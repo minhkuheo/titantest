@@ -2,18 +2,47 @@ import React from 'react';
 import styled from "styled-components";
 import { 
     Row, Col,
-    Button,
+    Button, Icon
 } from 'antd';
-import PlusSignBig from '../../images/PlusSignBig.svg';
-export const BigH1 = styled.h1`
+
+/** **********************************************
+ *  **********************************************
+ ** **********************************************/
+
+// export const Title = styled.h1`
+//     color: #fff;
+//     font-weight: 300;
+//     line-height: 1.3;
+//     margin: 0;
+//     font-size: 72px;
+//     ${props => props.color && `
+//         color: ${props.color}
+//     `};
+// `;
+export const Title = styled.h1`
     color: #fff;
     font-weight: 300;
     line-height: 1.3;
     margin: 0;
     font-size: 72px;
+    color: ${props => props.color ? props.color : '#fff'};
+`;
+
+export const Heading1 = styled.h1`
+    line-height: 1.3;
+    margin-bottom: 20px;
+    font-size: 48px;
+    font-weight: 400;
     ${props => props.color && `
         color: ${props.color}
     `};
+`;
+
+export const Heading2 = styled.h1`
+    line-height: 1.3;
+    margin: 0 0 20px 0;
+    font-size: 24px;
+    color: ${props => props.color ? props.color : '#000'};
 `;
 
 export const BasicLandingPageRow = styled(Row)`
@@ -91,16 +120,50 @@ export const StartSchedulingButton = styled(DefaultButton)`
 `;
 
 /**
- * 
+ * Used in fx. features.js file. 
+ * Comprise:
+ *      -----------------------------------------
+ *      |               |   title             	|
+ *      |     photo     |   paragraph           |
+ *      |               |                       |
+ *      ----------------------------------------- 
  */
-export const FeatureBoxOutline = ({title, paragraph}) => (
+export const FeatureBoxOutline = ({iconName, title, titleColor=undefined, paragraph, iconColor, iconSize }) => (
     <Row>
         <Col span={2}>
-            <img src={PlusSignBig} alt="plusbig13" style={{ width:'34px' }}/>
+            {/* <img src={PlusSignBig} alt="plusbig13" style={{ width:'34px' }}/> */}
+            <Icon type={iconName} spin={true} style={{ color:iconColor, fontSize:iconSize }} />
         </Col>
         <Col span={20}>
-            <h3>{title}</h3>
+            <Heading2 color={titleColor}>{title}</Heading2>
             <p>{paragraph}</p>
         </Col>
     </Row>
+);
+
+/**
+ * Used in fx landingpage.js
+ * Comprise:
+ *      -----------------------------
+ *      |                           |
+ *      |           Photo           |
+ *      |                           |
+ *      -----------------------------
+ *      |           TITLE           |
+ *      |         Paragraph         |
+ *      |        (something)        |
+ *      |                           |
+ *      -----------------------------
+ * @param {optimiseIcon} DOMobject  an img component
+ * @param {optimiseTitle} string    
+ * @param {optimiseDescription} string  
+ */
+export const OptimiseItem = ({ optimiseIcon, optimiseTitle, optimiseDescription }) => (
+    <Col span={8}>
+        <div className="featureIcon">
+            {optimiseIcon}
+        </div>
+        <Heading2>{optimiseTitle}</Heading2>
+        <p>{optimiseDescription}</p>
+    </Col>
 );
