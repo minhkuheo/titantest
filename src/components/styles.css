@@ -29,7 +29,7 @@ body {
 }
 .titan-header{
     height: 600px;
-    background: url(../images/topheadphotobackground.svg) transparent no-repeat center center;
+    background: url(../images/topheadphotobackground.png) transparent no-repeat center center;
     background-size: cover;
     text-align: center;
     padding-top: 150px;
@@ -48,7 +48,7 @@ body {
 .heroImg{
     width: 770px;
     height: 278px;
-    background: url(../images/screenshot.svg) transparent no-repeat center center;
+    background: url(../images/screenshot.png) transparent no-repeat center center;
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -97,7 +97,7 @@ body {
 }
 .featuresBox{
     height: 892px;
-    background: url('../images/laptopPhotoTurnRight.svg') no-repeat center center;
+    background: url('../images/laptopPhotoTurnRight.png') no-repeat center center;
     background-size: 1331px auto;
     background-position-x: -138px;
 }
@@ -107,7 +107,7 @@ body {
 
 .get-in-touch {
     height: 607px;
-    background: url(../images/aleksanderCoverPhoto.svg) transparent no-repeat left;
+    background: url(../images/aleksanderCoverPhoto.png) transparent no-repeat left;
     background-size: 653px 607px;
     position: relative;
 }
@@ -119,7 +119,7 @@ body {
 
 .featureBoxMobile {
     height: 1050px;
-    background: url('../images/TitanMobileFullScreen.svg') transparent no-repeat left center;
+    background: url('../images/TitanMobileFullScreen.png') transparent no-repeat left center;
     background-size: 421px 887px;
     background-position-x: 150px;
 }
@@ -129,7 +129,7 @@ body {
 
 .featureBoxLaptop {
     height: 892px;
-    background: url('../images/laptopPhotoTurnLeft.svg') transparent no-repeat right center;
+    background: url('../images/laptopPhotoTurnLeft.png') transparent no-repeat right center;
     background-size: 1328px 698px;
     background-position-x: 150px;
     background-color: #08B0A0;
